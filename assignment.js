@@ -20,20 +20,20 @@ function woodCalculator(chair,table,bed){
 const woodRequire = woodCalculator(10,5,3);
 console.log(woodRequire);
 
-/ Brick Calculator
+// Brick Calculator
 
 function brickCalculator(floorNumber){
+    let brickNeeded = 0;
     if(floorNumber<=10){
-        let brickNeeded = floorNumber * 1000 *15;
+         brickNeeded = floorNumber * 1000 *15;      
     }
     else if (floorNumber<=20){
-        let brickNeeded = (20-floorNumber)*1000*12+ 150000;
+         brickNeeded = (20-floorNumber)*1000*12+ 150000; // 150000 is added for first 10 floor & rest is counted by the ohter part of the formula
     }
     else{
-        let brickNeeded = 27000+(floorNumber-20)*1000*10;
+         brickNeeded = 27000+(floorNumber-20)*1000*10; // 270000 is added for first 20 floor & rest is counted by the ohter part of the formula
     }
-
-    return brickNeeded;
+    return brickNeeded;   
 }
 
 let brick = brickCalculator(17);
